@@ -1,9 +1,11 @@
 # PPV2-Samples-GeigerMueller
-ESP32, p+ sample: Geiger Müller counter with REDIS database connection
 
-To install the block library please look here: [Install blocks](https://github.com/Mynogs/PPV2-Simulation-System/blob/master/README.md#install-blocks). Copy only the folder ´ESP32´!
+A Geiger-Müller counter based on an inexpensive counter tube with electronics and an ESP32.
+The counter tube transmits the impulses of the radioactive particles to an ESP32. This sums up the impulses and writes them to a REDIS database via WiFi.
+This happens hourly as a rin buffer for one month, as well as continuously on a daily basis.
+A LuaRTOS runs on the ESP32. The application was developed using the p + simulation system.
 
-1. To install the <b>remote target</b>, copy the files in folder `Resources` in the `Resources` of the p+ folder if not installed
+1. Download the lates version of [p+](https://github.com/Mynogs/PPV2-ESP32)
 2. Visit the [Lua RTOS](ttps://github.com/whitecatboard/Lua-RTOS-ESP32) page and follow the intruction to install the Lua RTOS on the ESP32 device.
 
 :exclamation: Set the p+ user level to **Basic** to enable remote target injection.
